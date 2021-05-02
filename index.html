@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Bootstrap 4 Example</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.css">
+	<style type="text/css">
+
+		.owl-prev,
+		.owl-next {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		.owl-prev {
+			left: -2rem;
+		}
+
+		.owl-next {
+			right: -2rem;
+		}
+
+		.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot {
+			background: 0 0;
+			color: inherit;
+			border: none;
+			padding: 0!important;
+			font: inherit;
+			width: 30px;
+			height: 30px;
+			background: red;
+			border-radius: 50%;
+			font-size: 18px;
+			background-position: center;
+		}
+		.item.center{
+			font-weight: 900;
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<div class="container">
+		<h1>My First Bootstrap Page</h1>
+		<p>This is some text.</p> 
+		<div class="owl-carousel">
+			<div> our ContentY </div>
+			<div> Your Content </div>
+			<div> Your Content </div>
+			<div> Your Content </div>
+			<div> Your Content </div>
+			<div> Your Content </div>
+			<div> Your Content </div>
+		</div>
+		<script
+		src="https://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		crossorigin="anonymous"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<script src="js/owl.carousel.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('.owl-carousel').owlCarousel({
+					loop:true,
+					margin:10,
+					center:true,
+					responsiveClass:true,
+					responsive:{
+						0:{
+							items:1,
+							nav:true
+						},
+						600:{
+							items:3,
+							nav:false
+						},
+						1000:{
+							items:3,
+							nav:true,
+							loop:false
+						}
+					}
+				})
+
+			});
+		</script>
+	</body>
+	</html>
